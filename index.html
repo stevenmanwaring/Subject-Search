@@ -10,10 +10,11 @@
 <body>
 	<h1>Subject Search!</h1>
 	<form onsubmit="return false;" method="post" name="subjectSearch">
-		<label>Subject Search</label>
+		<label>Enter your email subject:</label>
 		<input id="textbox" type='text'/>
-		<input type="button" value="Check Subject Line!" onclick="checkSubject()">
+		<input type="button" value="Check" onclick="checkSubject()">
 	</form>
+	<h2>Spam Trigger Words:</h2>
 	<p id='result'></p>
 </body>
 </html>
