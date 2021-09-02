@@ -3,14 +3,14 @@ const badWords = ["% satisfied","%","off","acceptance","accordingly","act","now"
 function checkSubject() {
 	let input = document.getElementById("textbox").value;
 	input = input.toLowerCase();
-
-	//let subjectArray = input.split(' ');
 	
 	const resultArray = [];
 
 	for (let i=0; i < badWords.length; i++) {
-			if (input.includes(badWords[i])) {
-			resultArray.push(badWords[i]);
+		if (input.includes(badWords[i])) {
+			if (!resultArray.includes(badWords[i])) {
+				resultArray.push(badWords[i]);
+			}
 		}
 	}
 	printResult(resultArray);
